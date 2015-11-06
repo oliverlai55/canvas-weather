@@ -1,0 +1,36 @@
+#weather-canvas{
+	height: 322px;
+}
+
+.forecast-weather{
+	width:35%;
+}
+#put-city-name{
+	font-size: 50px;
+	float:left;
+}
+
+#put-forecast-morn-here{
+	width:20%;
+	float:left;
+}
+
+#put-forecast-night-here{
+	width:20%;
+	float:left;
+}
+
+#put-forecast-icon-here{
+	width:20%;
+	float:left;
+}
+
+#put-forecast-description-here{
+	width:20%;
+	float:left;
+}
+
+#put-forecast-humidity-here{
+	width:20%;
+	float:left;
+}
