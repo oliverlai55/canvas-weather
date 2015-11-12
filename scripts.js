@@ -26,7 +26,7 @@ $(document).ready(function($){
 		for ( var i=1; i<6; i++){
 			forecastMorn += '<div>'+weatherForecastData.list[i].temp.morn + '</div>'
 			forecastNight += '<div>'+weatherForecastData.list[i].temp.night + '</div>'
-			forecastIcon += '<img src="http://openweathermap.org/img/w/' + weatherForecastData.list[i].weather[0].icon + '.png">';
+			forecastIcon += '<img class="forecast-icon" src="http://openweathermap.org/img/w/' + weatherForecastData.list[i].weather[0].icon + '.png">';
 			forecastHumidity += '<div>' + weatherForecastData.list[i].humidity + '</div>';
 			forecastDescription += '<div>' + weatherForecastData.list[i].weather[0].description + '</div>';
  
@@ -42,9 +42,6 @@ $(document).ready(function($){
 
 		
 	});
-	
-
-
 
 	$.getJSON(weatherUrl, function(weatherData){
 		console.log(weatherData);
@@ -60,12 +57,7 @@ $(document).ready(function($){
 		$('#put-icon-here').attr('src', "http://openweathermap.org/img/w/" + currTempIcon+ ".png");
 
 
-
-	
-
 		console.log(currTemp);
-
-
 
 	var canvas = $('#weather-canvas');
 	var context = canvas[0].getContext('2d');

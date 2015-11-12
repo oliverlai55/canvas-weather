@@ -25,6 +25,10 @@
 	float:left;
 }
 
+.forecast-icon{
+	width: 29%;
+}
+
 #put-forecast-description-here{
 	width:20%;
 	float:left;
