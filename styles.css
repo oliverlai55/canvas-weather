@@ -1,10 +1,23 @@
 #weather-canvas{
-	height: 322px;
+	height: 203px;
+	margin-top: 8%;
 }
 
 .forecast-weather{
 	width:35%;
 }
+
+.current-weather{
+	margin-left: 8%;
+	margin-top: 4%;
+	padding: 0 15% 0 15%;
+}
+
+.current-icon1{
+	margin-right: 39% !important;
+	padding-left: 2% !important;
+}
+
 #put-city-name{
 	font-size: 50px;
 	float:left;

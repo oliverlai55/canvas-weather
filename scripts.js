@@ -52,8 +52,8 @@ $(document).ready(function($){
 		var putCityHere = weatherData.name;
 		console.log(putCityHere);
 		$('#put-city-name').html(weatherData.name);
-		$('#put-description-here').html(currTempDescription);
-		$('#put-humidity-here').html(weatherData.main.humidity + "%");
+		$('#put-description-here').html("Condition: " + currTempDescription);
+		$('#put-humidity-here').html("Humidity: " + weatherData.main.humidity + "%");
 		$('#put-icon-here').attr('src', "http://openweathermap.org/img/w/" + currTempIcon+ ".png");
 
 

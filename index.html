@@ -5,45 +5,48 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
 	<link rel="stylesheet" href="styles.css">
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">  -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"> 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-git2.min.js"></script>
 	<script type="text/javascript" src="scripts.js"></script>
 	<script type="text/javascript"></script>
 </head>
 <body>
 	<div class="container">
-		<div class="row search-form col-sm-12">
-			<form id="city-search-form" class="form-inline">
-			  <div class="form-group">
-			    <label class="sr-only">Search for a city</label>
-			    <div class="input-group">
-			      <input type="text" class="form-control" id="cityInput" placeholder="City Name">
-			  	</div>
-			  <button type="submit" class="btn btn-primary">Search!</button>
-			  </div>
-			</form>
-		</div>
-		<div class="current-weather">
-			<div class="row">
-				<div id="current-temp">
+		<div class="row">
+			<div class="search-form col-sm-12">
+				<form id="city-search-form" class="form-inline">
+					<div class="form-group">
+						<label class="sr-only">Search for a city</label>
+						<div class="input-group">
+							<input type="text" class="form-control" id="cityInput" placeholder="City Name">
+						</div>
+						<button type="submit" class="btn btn-primary">Search!</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="current-weather col-sm-5">
+				<div id="current-temp" class="col-sm-12">
 					<canvas id="weather-canvas">Test Text</canvas>
 				</div>
+				<div class="current col-sm-12">
+					<div id="put-city-name" class="col-sm-12"></div>
+					<div id="put-description-here" class="col-sm-6"></div>
+					<div class="current-icon1" col-sm-6">
+						<img id="put-icon-here" src="">
+					</div>
+					<div id="put-humidity-here" class="col-sm-12"></div>
+					
+				</div>
 			</div>
-			<div class="current">
-				<div id="put-city-name"></div>
-				<div id="put-description-here"></div>
-				<div id="put-humidity-here"></div>
-				<img id="put-icon-here" src="">
+			<div class="forecast-weather col-sm-6">
+				<div id="put-forecast-morn-here"></div>
+				<div id="put-forecast-night-here"></div>
+				<div class="forecast-icon" id="put-forecast-icon-here" src=""></div>
+				<div id="put-forecast-description-here"></div>
+				<div id="put-forecast-humidity-here"></div>
 			</div>
 		</div>
-		<div class="forecast-weather">
-			<div id="put-forecast-morn-here"></div>
-			<div id="put-forecast-night-here"></div>
-			<div class="forecast-icon" id="put-forecast-icon-here" src=""></div>
-			<div id="put-forecast-description-here"></div>
-			<div id="put-forecast-humidity-here"></div>
-		</div>
-		
 	</div>
 	
 </body>
