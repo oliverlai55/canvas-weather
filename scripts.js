@@ -6,16 +6,14 @@ $(document).ready(function($){
 
 	$('#city-search-form').submit(function(){
 		event.preventDefault();
-
+		
+		$('#forecast-title').html("PORRRICE")
 
 		var cityName = $('#cityInput').val();
-		
 		var weatherUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&APPID="+apikey;
 		var weatherForecast = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" +cityName + ",us&units=imperial&APPID="+apikey;
-
-
-		//make the cityinput into the html on html page
 		
+		//make the cityinput into the html on html page
 	$.getJSON(weatherForecast, function(weatherForecastData){
 		console.log(weatherForecastData);
 		var forecastIcon='';
@@ -30,8 +28,6 @@ $(document).ready(function($){
 			forecastHumidity += '<div>' + weatherForecastData.list[i].humidity + '%</div>';
 			forecastDescription += '<div>' + weatherForecastData.list[i].weather[0].description + '</div>';
  
-
-
 			console.log(weatherForecastData.list[i]);
 		}
 		$('#put-forecast-morn-here').html(forecastMorn);
@@ -39,10 +35,8 @@ $(document).ready(function($){
 		$('#put-forecast-icon-here').html(forecastIcon);
 		$('#put-forecast-humidity-here').html(forecastHumidity);
 		$('#put-forecast-description-here').html(forecastDescription);
-
-		
 	});
-
+	
 	$.getJSON(weatherUrl, function(weatherData){
 		console.log(weatherData);
 
@@ -55,7 +49,6 @@ $(document).ready(function($){
 		$('#put-description-here').html("Condition: " + currTempDescription);
 		$('#put-humidity-here').html("Humidity: " + weatherData.main.humidity + "%");
 		$('#put-icon-here').attr('src', "http://openweathermap.org/img/w/" + currTempIcon+ ".png");
-
 
 		console.log(currTemp);
 
@@ -93,9 +86,6 @@ $(document).ready(function($){
 	}
 
 
-
-
-
 function animate(current){
 
 	context.fillStyle = "#ccc";
@@ -103,7 +93,6 @@ function animate(current){
 	context.arc(155, 75,innerRadius,0,2*Math.PI,true);
 	context.closePath();
 	context.fill();
-
 
 	context.lineWidth = 5;
 	context.strokeStyle = shadeColor
@@ -118,10 +107,8 @@ function animate(current){
 	if(currPerc < currTemp){
 		requestAnimationFrame(function(){
 			animate(currPerc / 100);
-
 		});
 	}
-
 }
 
 animate();
