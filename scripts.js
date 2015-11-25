@@ -27,7 +27,7 @@ $(document).ready(function($){
 			forecastMorn += '<div>'+weatherForecastData.list[i].temp.morn + '</div>'
 			forecastNight += '<div>'+weatherForecastData.list[i].temp.night + '</div>'
 			forecastIcon += '<img class="forecast-icon" src="http://openweathermap.org/img/w/' + weatherForecastData.list[i].weather[0].icon + '.png">';
-			forecastHumidity += '<div>' + weatherForecastData.list[i].humidity + '</div>';
+			forecastHumidity += '<div>' + weatherForecastData.list[i].humidity + '%</div>';
 			forecastDescription += '<div>' + weatherForecastData.list[i].weather[0].description + '</div>';
  
 
@@ -37,7 +37,7 @@ $(document).ready(function($){
 		$('#put-forecast-morn-here').html(forecastMorn);
 		$('#put-forecast-night-here').html(forecastNight);
 		$('#put-forecast-icon-here').html(forecastIcon);
-		$('#put-forecast-humidity-here').html(forecastHumidity + "%");
+		$('#put-forecast-humidity-here').html(forecastHumidity);
 		$('#put-forecast-description-here').html(forecastDescription);
 
 		
@@ -113,7 +113,7 @@ function animate(current){
 	context.font = "35px Arial";
 	context.fillStyle= "White";
 	context.textBaseLine = "hanging";
-	context.fillText(currTemp, 175-outterRadius, 85-outterRadius/2);
+	context.fillText(currTemp, 185-outterRadius, 115-outterRadius/2,80);
 	currPerc++;
 	if(currPerc < currTemp){
 		requestAnimationFrame(function(){
