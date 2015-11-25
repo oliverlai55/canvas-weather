@@ -81,13 +81,13 @@ $(document).ready(function($){
 	var shadeColor; //hoisted so no need for it
 
 	if(currTemp < 32){
-		shadeColor = '#d4f0ff';
+		shadeColor = '#3399ff';
 	}else if((currTemp >= 32) && (currTemp < 59)){
-		shadeColor = "#129793";
+		shadeColor = "#66ccff";
 	}else if((currTemp >= 59) && (currTemp < 75)){
-		shadeColor = "#7cfc00";
+		shadeColor = "#ff6633";
 	}else if((currTemp >= 75) && (currTemp < 90)){
-		shadeColor = "#ff6600";
+		shadeColor = "#ff0000";
 	}else{
 		shadeColor = "#e3170d";
 	}
@@ -105,14 +105,14 @@ function animate(current){
 	context.fill();
 
 
-	context.lineWidth = 10;
+	context.lineWidth = 5;
 	context.strokeStyle = shadeColor
 	context.beginPath();
 	context.arc(155, 75, outterRadius, -(quart), ((circ) * current) - quart, false);
 	context.stroke();
-	context.font = "48px Myriad Pro";
-	context.fillStyle= "Blue";
-	context.textBaseLine = "top";
+	context.font = "35px Arial";
+	context.fillStyle= "White";
+	context.textBaseLine = "hanging";
 	context.fillText(currTemp, 175-outterRadius, 85-outterRadius/2);
 	currPerc++;
 	if(currPerc < currTemp){

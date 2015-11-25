@@ -1,3 +1,13 @@
+body{
+	color: white;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url("http://www.electricyouniverse.com/eye/thumbs/lrg-1374-the-creation-formation-of-cloud-streets-lines-weather-explained.jpg");
+}
+.container{
+	color: white;
+}
+
 #weather-canvas{
 	height: 203px;
 	margin-top: 8%;
