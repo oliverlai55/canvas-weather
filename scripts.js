@@ -7,7 +7,14 @@ $(document).ready(function($){
 	$('#city-search-form').submit(function(){
 		event.preventDefault();
 		
-		$('#forecast-title').html("PORRRICE")
+		var forecastTitle = '';
+		forecastTitle += '<div class="title-morn col-sm-3">Morn</div>';
+		forecastTitle += '<div class="title-night col-sm-3">Night</div>';
+		forecastTitle += '<div class="title-humidity col-sm-3">Humidity</div>';
+		forecastTitle += '<div class="title-condition col-sm-3">Condition</div>';
+		
+
+		$('#forecast-title').html(forecastTitle);
 
 		var cityName = $('#cityInput').val();
 		var weatherUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&APPID="+apikey;
@@ -22,11 +29,11 @@ $(document).ready(function($){
 		var forecastHumidity ='';
 		var forecastDescription ='';
 		for ( var i=1; i<6; i++){
-			forecastMorn += '<div>'+weatherForecastData.list[i].temp.morn + '</div>'
-			forecastNight += '<div>'+weatherForecastData.list[i].temp.night + '</div>'
-			forecastIcon += '<img class="forecast-icon" src="http://openweathermap.org/img/w/' + weatherForecastData.list[i].weather[0].icon + '.png">';
-			forecastHumidity += '<div>' + weatherForecastData.list[i].humidity + '%</div>';
-			forecastDescription += '<div>' + weatherForecastData.list[i].weather[0].description + '</div>';
+			forecastMorn += '<div class="morn">'+weatherForecastData.list[i].temp.morn + '</div>'
+			forecastNight += '<div class="night">'+weatherForecastData.list[i].temp.night + '</div>'
+			forecastIcon += '<img class="forecast-icon col-sm-12" src="http://openweathermap.org/img/w/' + weatherForecastData.list[i].weather[0].icon + '.png">';
+			forecastHumidity += '<div class="humidity">' + weatherForecastData.list[i].humidity + '%</div>';
+			forecastDescription += '<div class="description">' + weatherForecastData.list[i].weather[0].description + '</div>';
  
 			console.log(weatherForecastData.list[i]);
 		}
@@ -88,7 +95,7 @@ $(document).ready(function($){
 
 function animate(current){
 
-	context.fillStyle = "#ccc";
+	context.fillStyle = "#888888";
 	context.beginPath();
 	context.arc(155, 75,innerRadius,0,2*Math.PI,true);
 	context.closePath();
