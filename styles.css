@@ -16,7 +16,7 @@ body{
 
 .forecast-weather{
 	width:35%;
-	margin-top: 9%;
+	margin-top: 25%;
 }
 
 .current-weather{
@@ -25,6 +25,9 @@ body{
 	padding: 0 15% 0 15%;
 }
 
+.current{
+	margin-left: 24%;
+}
 .current-icon1{
 	margin-right: 39% !important;
 	padding-left: 2% !important;
