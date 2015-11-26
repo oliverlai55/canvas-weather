@@ -8,13 +8,22 @@ $(document).ready(function($){
 		event.preventDefault();
 		
 		var forecastTitle = '';
+		var forecastDays ='';
 		forecastTitle += '<div class="title-morn col-sm-3">Morn</div>';
 		forecastTitle += '<div class="title-night col-sm-3">Night</div>';
 		forecastTitle += '<div class="title-humidity col-sm-3">Humidity</div>';
 		forecastTitle += '<div class="title-condition col-sm-3">Condition</div>';
+
+		forecastDays += '<div class="title-day col-sm-3">Day</div>';
+		forecastDays += '<div class="title-day2 col-sm-3">2</div>';
+		forecastDays += '<div class="title-day3 col-sm-3">3</div>';
+		forecastDays += '<div class="title-day4 col-sm-3">4</div>';
+		forecastDays += '<div class="title-day5 col-sm-3">5</div>';
+		forecastDays += '<div class="title-day6 col-sm-3">6</div>';
 		
 
 		$('#forecast-title').html(forecastTitle);
+		$('#forecast-days').html(forecastDays);
 
 		var cityName = $('#cityInput').val();
 		var weatherUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&APPID="+apikey;
@@ -83,7 +92,7 @@ $(document).ready(function($){
 	if(currTemp < 32){
 		shadeColor = '#3399ff';
 	}else if((currTemp >= 32) && (currTemp < 59)){
-		shadeColor = "#66ccff";
+		shadeColor = "white";
 	}else if((currTemp >= 59) && (currTemp < 75)){
 		shadeColor = "#ff6633";
 	}else if((currTemp >= 75) && (currTemp < 90)){
@@ -101,7 +110,7 @@ function animate(current){
 	context.closePath();
 	context.fill();
 
-	context.lineWidth = 5;
+	context.lineWidth = 2.5;
 	context.strokeStyle = shadeColor
 	context.beginPath();
 	context.arc(155, 75, outterRadius, -(quart), ((circ) * current) - quart, false);

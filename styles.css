@@ -14,14 +14,19 @@ body{
 	margin-top: 8%;
 }
 
+#forecast-days{
+	width:7%;
+	margin-top: 24.95%;
+	font-size: 21px;
+}
 .forecast-weather{
 	width:35%;
 	margin-top: 25%;
 }
 
 .current-weather{
-	margin-left: 8%;
 	margin-top: 4%;
+	margin-right: 6%;
 	padding: 0 15% 0 15%;
 }
 
@@ -36,6 +41,14 @@ body{
 #put-city-name{
 	font-size: 50px;
 	float:left;
+}
+
+#put-description-here{
+	font-size: 21.5px;
+}
+
+#put-humidity-here{
+	font-size: 21.5px;
 }
 
 #forecast-title{
@@ -108,5 +121,21 @@ body{
 	font-size:20px;
 	margin-left: -9%;
 	margin-right:8%;
+}
 
+.title-day2{
+	margin-top: -3%;
+}
+
+.title-day3{
+	margin-top: 5%;
+}
+
+.title-day4{
+	margin-top: 4%;
+	margin-bottom: 4%;
+}
+
+.title-day6{
+	margin-top: 4%;
 }
