@@ -3,7 +3,55 @@ body{
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-image: url("https://static.pexels.com/photos/799/city-lights-night-clouds.jpg");
-	/*http://www.electricyouniverse.com/eye/thumbs/lrg-1374-the-creation-formation-of-cloud-streets-lines-weather-explained.jpg*/
+}
+#intro-page-wrapper{
+	text-align: center;
+	overflow: scroll;
+	position: absolute;
+	width: 100%;
+	background-color: rgba(2,2,5,0.87);
+	top: 0px;
+	left: 0px;
+	z-index: 1000000000;
+	color: #f2f2f2;
+}
+
+#intro-page-wrapper h1{
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-top: 3%
+}
+
+#intro-page-wrapper p{
+	line-height: 125%;
+	width: 60%;
+	margin: auto;
+	text-align: justify;
+	font-size: 20px;
+	padding-top: 25px;
+	padding-bottom: 20px;
+	font-weight: 300;
+}
+
+#intro-page-wrapper button{
+	border-radius: 2px;
+	text-transform: uppercase;
+	text-align: center;
+	width: 225px;
+	padding: 15px;
+	color: white;
+	background-color: #757584;
+	margin: auto;
+	font-size: 18px;
+	margin-top: 30px;
+	border: 0px;
+	letter-spacing: 3px;
+}
+
+#intro-page-wrapper button:hover{
+	cursor: pointer;
+	background-color: #a3a3ad;
 }
 .container{
 	color: white;
